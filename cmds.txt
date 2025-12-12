@@ -1,0 +1,7 @@
+npx create-react-app redux
+cd redux
+npm start
+npm i react-router-dom
+
+npm i @reduxjs/toolkit
+npm i react-redux
