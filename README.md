@@ -14,57 +14,58 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+🛍️ Product Store — React + Redux Toolkit
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A simple product store built with React and Redux Toolkit, showcasing global state management, async API fetching, and cart functionality.
 
-### `npm run build`
+🚀 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Fetch products asynchronously using createAsyncThunk
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Loading & error states handled via extraReducers
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Add / remove items in a global cart
 
-### `npm run eject`
+Clean state management using:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+createSlice
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+useSelector / useDispatch
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Object.freeze for enum-like statuses
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🧱 How It Works
 
-## Learn More
+On page load, a thunk fetches product data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Redux updates state based on async lifecycle:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+loading → idle → error
 
-### Code Splitting
+Products display in the UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Users can add or remove items from the cart.
 
-### Analyzing the Bundle Size
+Cart state is available globally across the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📂 Project Highlights
 
-### Making a Progressive Web App
+Modern Redux Toolkit setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Clear separation of product and cart slices
 
-### Advanced Configuration
+Simple, scalable architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Easy to understand async flow with thunks
 
-### Deployment
+🎯 Purpose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project demonstrates how to build a small, real-world React application using Redux Toolkit with:
 
-### `npm run build` fails to minify
+Async data fetching
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Centralized state
+
+Clean reducer logic
+
+React-Redux hooks
